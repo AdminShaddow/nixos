@@ -1,0 +1,57 @@
+{pkgs, lib, ... }:
+{
+  services = {
+#-----
+    openssh.enable = true;
+#-----
+    zerotierone = {
+      enable = true;
+      package = pkgs.zerotierone;
+      port = 9993;
+    };
+#-----
+    resolved.enable = true;
+#-----
+  };
+#-----
+  systemd.network = {
+    enable = true;
+    wait-online.enable = false;
+    networks."10-wlan" = {
+      matchConfig.name = "wlan0";
+      networkConfig = {
+        DHCP = "ipv4";
+        IPv6AcceptRA = true;
+      };
+    };
+  };
+  nix = {
+    settings = {
+      http-connections = 128;
+      max-substitution-jobs = 128;
+      max-jobs = "auto";
+    };
+  };
+
+#-----
+  networking = {
+    useNetworkd = true;
+    wireless.iwd.enable = true;
+    networkmanager = {
+      enable = false;
+      wifi = {
+        backend = "iwd";
+        powersave = false;
+      };
+      dns = "systemd-resolved";
+    };
+    hostName = "nixos";
+    firewall = {
+      enable = true;
+      trustedInterfaces = [ "zt3hhnwgpj" ];
+    };
+    # Open ports in the firewall.
+    # networking.firewall.allowedTCPPorts = [ ... ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
+  };
+}
