@@ -58,6 +58,10 @@ in
         rich-preview = ypl.rich-preview;
         smart-filter = ypl.smart-filter;
         mediainfo = ypl.mediainfo;
+	sudo = ypl.sudo;
+	compress = ypl.compress;
+	rsync = ypl.rsync;
+	yatline-githead = ypl.yatline-githead;
       };
       package = (pkgs.yazi.override { _7zz = pkgs._7zz-rar; });
       extraPackages = with pkgs; [

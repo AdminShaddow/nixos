@@ -34,6 +34,7 @@
         dbus.enable = true;
         network.wait-online.enable = false;
       };
+      availableKernelModules = ["zram"];
     };
     loader = {
       systemd-boot.enable = true;
