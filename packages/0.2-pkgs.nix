@@ -78,6 +78,5 @@
     wl-clipboard
     trash-cli
     _7zz-rar
-    xdg-desktop-portal-termfilechooser
     ];
 }
