@@ -14,6 +14,10 @@ let
   ypl = pkgs.yaziPlugins;
 in
 {
+  imports = [
+    inputs.stylix.homeModules.stylix
+  ];
+
 /*
   xdg.configFile = {
     "vesktop/settings.json" = {
@@ -26,6 +30,15 @@ in
     };
   };
 */
+
+  stylix = {
+  	enable = true;
+	base16Scheme = "${pkgs.base16-schemes}/share/themes/lime.yaml";
+	polarity = "dark";
+    targets = {
+    waybar.enable = false;
+    };
+  };
 
   programs = {
     vesktop.enable = true;
@@ -93,10 +106,6 @@ in
   home.username = "marcelb";
   home.homeDirectory = "/home/marcelb";
   home.stateVersion = "25.05";
-
-  nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
-  };
 
   wayland.windowManager.hyprland.plugins = with pkgs.hyprlandPlugins; [
     hy3 # i3 like tiling manager

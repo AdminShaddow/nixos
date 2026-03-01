@@ -19,12 +19,11 @@
         javaPackages.compiler.temurin-bin.jdk-21
         javaPackages.compiler.temurin-bin.jdk-8
         javaPackages.compiler.temurin-bin.jdk-17
-        jdk17_headless
       ];
     })
     umu-launcher
     nero-umu
-    (wineWowPackages.stable.override { waylandSupport = true;})
+    (wineWow64Packages.stable.override { waylandSupport = true;})
     winetricks
     # Apps
     gimp
@@ -40,6 +39,7 @@
     gnome-themes-extra
     #
     pulseaudio
+    pavucontrol
     brightnessctl
     dunst
     volctl
@@ -61,22 +61,32 @@
     # Networking
     arp-scan
     # Packaging / Formatting / Disk
-    rpi-imager
+    #rpi-imager
     kdePackages.isoimagewriter
     # Testing
-    discordchatexporter-desktop
+    #discordchatexporter-desktop
     howl
-    clipse
-    slides
+    #clipse
+    #slides
     (ungoogled-chromium.override { enableWideVine = true; })
     starship
     neovim
     gammastep
-    fileshare
     obsidian
+
+    # tparted
+    parted
+    tparted
+    xfsprogs
+    dosfstools
+    exfatprogs
+    e2fsprogs
 
     wl-clipboard
     trash-cli
     _7zz-rar
+
+    copyparty
+    cloudflared
     ];
 }

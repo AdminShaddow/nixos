@@ -14,12 +14,6 @@
   };
 
 
-  stylix = {
-  	enable = true;
-	base16Scheme = "${pkgs.base16-schemes}/share/themes/lime.yaml";
-	polarity = "dark";
-  };
-
   # Authorization protocol
   security.polkit.enable = true;
 

@@ -22,6 +22,7 @@
       networkConfig = {
         DHCP = "ipv4";
         IPv6AcceptRA = true;
+	IgnoreCarrierLoss=3s;	
       };
     };
   };
