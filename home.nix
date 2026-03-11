@@ -33,7 +33,7 @@ in
 
   stylix = {
   	enable = true;
-	base16Scheme = "${pkgs.base16-schemes}/share/themes/lime.yaml";
+	base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
 	polarity = "dark";
     targets = {
     waybar.enable = false;

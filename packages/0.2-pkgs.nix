@@ -12,7 +12,6 @@
     */
     pkg-config
     git
-    eget
     # Games
     (prismlauncher.override {
       jdks = [
@@ -42,7 +41,6 @@
     pavucontrol
     brightnessctl
     dunst
-    volctl
     qimgv
     # For Hyprland / Wayland
     hyprshot
@@ -53,6 +51,7 @@
     wl-clicker
     # For IP-Camera
     mpv
+    ffmpeg
     # X11 / Debugging / Tools
     btop
     xclicker
@@ -70,11 +69,10 @@
     #slides
     (ungoogled-chromium.override { enableWideVine = true; })
     starship
-    neovim
     gammastep
     obsidian
 
-    # tparted
+    # Partitioning
     parted
     tparted
     xfsprogs
@@ -82,10 +80,12 @@
     exfatprogs
     e2fsprogs
 
+    # Yazi-Stuff
     wl-clipboard
     trash-cli
     _7zz-rar
 
+    # Storage Hosting
     copyparty
     cloudflared
     ];
