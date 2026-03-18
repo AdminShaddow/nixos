@@ -3,13 +3,15 @@
   environment.systemPackages = with pkgs; [
     # Installers / Wrappers / Packager / etc..
     /*
-    cmake
     cargo-tauri
     cargo
     rustc
     uv
     nodejs_24
     */
+    cmake
+    gcc
+    gdb
     pkg-config
     git
     # Games
@@ -32,6 +34,7 @@
     # Programmieren
     dotnet-sdk_9
     dotnet-runtime_9
+    codeblocks
     # Customization
     fastfetch
     lolcat

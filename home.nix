@@ -54,7 +54,6 @@ in
       enable = true;
       plugins = with pkgs; [
         rofi-calc
-        rofi-file-browser
         rofi-nerdy
       ];
     };
@@ -71,10 +70,10 @@ in
         rich-preview = ypl.rich-preview;
         smart-filter = ypl.smart-filter;
         mediainfo = ypl.mediainfo;
-	sudo = ypl.sudo;
-	compress = ypl.compress;
-	rsync = ypl.rsync;
-	yatline-githead = ypl.yatline-githead;
+	      sudo = ypl.sudo;
+	      compress = ypl.compress;
+	      rsync = ypl.rsync;
+	      yatline-githead = ypl.yatline-githead;
       };
       package = (pkgs.yazi.override { _7zz = pkgs._7zz-rar; });
       extraPackages = with pkgs; [
@@ -95,19 +94,10 @@ in
 
   home.packages = with pkgs; [
     rofi-screenshot
-    rofi-menugen
-    rofi-mpd
-    rofi-obsidian
-    rofi-power-menu
-    rofi-network-manager
     rofimoji
   ];
 
   home.username = "marcelb";
   home.homeDirectory = "/home/marcelb";
   home.stateVersion = "25.05";
-
-  wayland.windowManager.hyprland.plugins = with pkgs.hyprlandPlugins; [
-    hy3 # i3 like tiling manager
-  ];
 }
